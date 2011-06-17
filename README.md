@@ -18,6 +18,7 @@ Given the location, I was unsure about the stability of my connectivity, so that
    so if I lost connectivity for a spell, I should still have plenty of local data to process.
 
 3) The printing device we had our eye on is the Polaroid GL10
+
    Printer: http://store.polaroid.com/product/0/425422/GL10/_/Instant_Mobile_Printer
 
    Paper: http://store.polaroid.com/product/0/0/M340/_/Polaroid_3%22x4%22_ZINK_Paper%26%23174%3B
