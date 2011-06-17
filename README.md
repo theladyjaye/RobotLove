@@ -29,7 +29,9 @@ So, this is still a work in progress, if you run into any issues and need a hand
 High Level
 -------------
 The server agent polls Instagram (see config for setting this interval time) for new photos based on #hashtag or location id. As it encounters new photos it will do 2 things:
+
 1) Save them to disk
+
 2) Save the image data in CouchDB along with some meta information
 
 At the same time, the desktop agent polls the server agent for new photos.  It does this using CouchDB's nifty replication and changes features.
