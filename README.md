@@ -42,19 +42,19 @@ See: server-agent/robotlove/config.js
 
 Server Agent Config Properties:
 --------------------------------
-module.exports = {
-	"interval" : 60000,       // Polling interval, in milliseconds.
-	"dropbox"  : "./dropbox", // Where on the server's file system should it store the images it acquires from Instagram.
-	"couchdb"  : "robotlove", // database to save data to in couchdb
-	"instagram": 
-	{
-		"api_key"           : "<your api key>", // Instagram API Key
-		"location_id"       : "3241884", // Location Id 
-		"tag"               : "robotlove2011", // Hash Tag don't need the #
-		"location_id_cache" : "__instagram_location", // Filename to store the last location photo id grabbed from Instagram 
-		"tag_id_cache"      : "__instagram_tag", // Filename to store the last tag photo id grabbed from Instagram
+	module.exports = {
+		"interval" : 60000,       // Polling interval, in milliseconds.
+		"dropbox"  : "./dropbox", // Where on the server's file system should it store the images it acquires from Instagram.
+		"couchdb"  : "robotlove", // database to save data to in couchdb
+		"instagram": 
+		{
+			"api_key"           : "<your api key>", // Instagram API Key
+			"location_id"       : "3241884", // Location Id 
+			"tag"               : "robotlove2011", // Hash Tag don't need the #
+			"location_id_cache" : "__instagram_location", // Filename to store the last location photo id grabbed from Instagram 
+			"tag_id_cache"      : "__instagram_tag", // Filename to store the last tag photo id grabbed from Instagram
+		}
 	}
-}
 
 
 Software Requirements
