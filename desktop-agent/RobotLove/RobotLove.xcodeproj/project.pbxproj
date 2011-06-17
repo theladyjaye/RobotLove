@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D722177413A7A1700036BD17 /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D722177313A7A1700036BD17 /* YAJL.framework */; };
+		D7C52B9E13A70C1600D92B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C52B9D13A70C1600D92B8F /* Cocoa.framework */; };
+		D7C52BA813A70C1600D92B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7C52BA613A70C1600D92B8F /* InfoPlist.strings */; };
+		D7C52BAB13A70C1600D92B8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BAA13A70C1600D92B8F /* main.m */; };
+		D7C52BAE13A70C1600D92B8F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D7C52BAC13A70C1600D92B8F /* Credits.rtf */; };
+		D7C52BB113A70C1600D92B8F /* RobotLoveAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BB013A70C1600D92B8F /* RobotLoveAppDelegate.m */; };
+		D7C52BB413A70C1600D92B8F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C52BB213A70C1600D92B8F /* MainMenu.xib */; };
+		D7C52BBD13A70CC700D92B8F /* RLHeartbeat.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BBC13A70CC700D92B8F /* RLHeartbeat.m */; };
+		D7C52BD413A70F8700D92B8F /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BC313A70F8700D92B8F /* ASIDataCompressor.m */; };
+		D7C52BD513A70F8700D92B8F /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BC513A70F8700D92B8F /* ASIDataDecompressor.m */; };
+		D7C52BD613A70F8700D92B8F /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BC713A70F8700D92B8F /* ASIDownloadCache.m */; };
+		D7C52BD713A70F8700D92B8F /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BC913A70F8700D92B8F /* ASIFormDataRequest.m */; };
+		D7C52BD813A70F8700D92B8F /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BCB13A70F8700D92B8F /* ASIHTTPRequest.m */; };
+		D7C52BD913A70F8700D92B8F /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BCF13A70F8700D92B8F /* ASIInputStream.m */; };
+		D7C52BDA13A70F8700D92B8F /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BD113A70F8700D92B8F /* ASINetworkQueue.m */; };
+		D7C52BDC13A711E000D92B8F /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C52BDB13A711E000D92B8F /* libz.1.2.3.dylib */; };
+		D7C52BDE13A7123900D92B8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C52BDD13A7123900D92B8F /* SystemConfiguration.framework */; };
+		D7C52BE113A713E100D92B8F /* CouchDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52BE013A713E100D92B8F /* CouchDB.m */; };
+		D7C52BE313A7156100D92B8F /* RobotLove-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7C52BE213A7156100D92B8F /* RobotLove-Config.plist */; };
+		D7D81C1D13A8567B00737FCE /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D81C1C13A8567B00737FCE /* NSDictionary+UrlEncoding.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7D81C1513A8520300737FCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7D81C0C13A8520300737FCE /* YAJL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = YAJL;
+		};
+		D7D81C1713A8520300737FCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7D81C0C13A8520300737FCE /* YAJL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00E5DDF80F5B6E3E00C11F1D;
+			remoteInfo = Tests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D722177513A7A1800036BD17 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D722177313A7A1700036BD17 /* YAJL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YAJL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C52B9913A70C1600D92B8F /* RobotLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C52B9D13A70C1600D92B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D7C52BA013A70C1600D92B8F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D7C52BA113A70C1600D92B8F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D7C52BA213A70C1600D92B8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D7C52BA513A70C1600D92B8F /* RobotLove-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RobotLove-Info.plist"; sourceTree = "<group>"; };
+		D7C52BA713A70C1600D92B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7C52BA913A70C1600D92B8F /* RobotLove-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RobotLove-Prefix.pch"; sourceTree = "<group>"; };
+		D7C52BAA13A70C1600D92B8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7C52BAD13A70C1600D92B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D7C52BAF13A70C1600D92B8F /* RobotLoveAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RobotLoveAppDelegate.h; sourceTree = "<group>"; };
+		D7C52BB013A70C1600D92B8F /* RobotLoveAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobotLoveAppDelegate.m; sourceTree = "<group>"; };
+		D7C52BB313A70C1600D92B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D7C52BBB13A70CC700D92B8F /* RLHeartbeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLHeartbeat.h; sourceTree = "<group>"; };
+		D7C52BBC13A70CC700D92B8F /* RLHeartbeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLHeartbeat.m; sourceTree = "<group>"; };
+		D7C52BC113A70F8700D92B8F /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		D7C52BC213A70F8700D92B8F /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		D7C52BC313A70F8700D92B8F /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		D7C52BC413A70F8700D92B8F /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		D7C52BC513A70F8700D92B8F /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		D7C52BC613A70F8700D92B8F /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		D7C52BC713A70F8700D92B8F /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		D7C52BC813A70F8700D92B8F /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		D7C52BC913A70F8700D92B8F /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		D7C52BCA13A70F8700D92B8F /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		D7C52BCB13A70F8700D92B8F /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		D7C52BCC13A70F8700D92B8F /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		D7C52BCD13A70F8700D92B8F /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		D7C52BCE13A70F8700D92B8F /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		D7C52BCF13A70F8700D92B8F /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		D7C52BD013A70F8700D92B8F /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		D7C52BD113A70F8700D92B8F /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		D7C52BD213A70F8700D92B8F /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		D7C52BDB13A711E000D92B8F /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		D7C52BDD13A7123900D92B8F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D7C52BDF13A713E100D92B8F /* CouchDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchDB.h; sourceTree = "<group>"; };
+		D7C52BE013A713E100D92B8F /* CouchDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchDB.m; sourceTree = "<group>"; };
+		D7C52BE213A7156100D92B8F /* RobotLove-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RobotLove-Config.plist"; sourceTree = "<group>"; };
+		D7D81C0C13A8520300737FCE /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = "../../../../github/yajl-objc/Project/YAJL.xcodeproj"; sourceTree = "<group>"; };
+		D7D81C1B13A8567B00737FCE /* NSDictionary+UrlEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+UrlEncoding.h"; sourceTree = "<group>"; };
+		D7D81C1C13A8567B00737FCE /* NSDictionary+UrlEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+UrlEncoding.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7C52B9613A70C1600D92B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D722177413A7A1700036BD17 /* YAJL.framework in Frameworks */,
+				D7C52BDE13A7123900D92B8F /* SystemConfiguration.framework in Frameworks */,
+				D7C52BDC13A711E000D92B8F /* libz.1.2.3.dylib in Frameworks */,
+				D7C52B9E13A70C1600D92B8F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7C52B8E13A70C1500D92B8F = {
+			isa = PBXGroup;
+			children = (
+				D7D81C0C13A8520300737FCE /* YAJL.xcodeproj */,
+				D7C52BDB13A711E000D92B8F /* libz.1.2.3.dylib */,
+				D7C52BA313A70C1600D92B8F /* RobotLove */,
+				D7C52B9C13A70C1600D92B8F /* Frameworks */,
+				D7C52B9A13A70C1600D92B8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7C52B9A13A70C1600D92B8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7C52B9913A70C1600D92B8F /* RobotLove.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7C52B9C13A70C1600D92B8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D722177313A7A1700036BD17 /* YAJL.framework */,
+				D7C52BDD13A7123900D92B8F /* SystemConfiguration.framework */,
+				D7C52B9D13A70C1600D92B8F /* Cocoa.framework */,
+				D7C52B9F13A70C1600D92B8F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7C52B9F13A70C1600D92B8F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7C52BA013A70C1600D92B8F /* AppKit.framework */,
+				D7C52BA113A70C1600D92B8F /* CoreData.framework */,
+				D7C52BA213A70C1600D92B8F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D7C52BA313A70C1600D92B8F /* RobotLove */ = {
+			isa = PBXGroup;
+			children = (
+				D7D81C1A13A8565400737FCE /* Utils */,
+				D7C52BBE13A70F4B00D92B8F /* ASIHTTPRequest */,
+				D7C52BBA13A70CA200D92B8F /* CouchDB */,
+				D7C52BBB13A70CC700D92B8F /* RLHeartbeat.h */,
+				D7C52BBC13A70CC700D92B8F /* RLHeartbeat.m */,
+				D7C52BAF13A70C1600D92B8F /* RobotLoveAppDelegate.h */,
+				D7C52BB013A70C1600D92B8F /* RobotLoveAppDelegate.m */,
+				D7C52BB213A70C1600D92B8F /* MainMenu.xib */,
+				D7C52BA413A70C1600D92B8F /* Supporting Files */,
+			);
+			path = RobotLove;
+			sourceTree = "<group>";
+		};
+		D7C52BA413A70C1600D92B8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7C52BA513A70C1600D92B8F /* RobotLove-Info.plist */,
+				D7C52BA613A70C1600D92B8F /* InfoPlist.strings */,
+				D7C52BA913A70C1600D92B8F /* RobotLove-Prefix.pch */,
+				D7C52BAA13A70C1600D92B8F /* main.m */,
+				D7C52BAC13A70C1600D92B8F /* Credits.rtf */,
+				D7C52BE213A7156100D92B8F /* RobotLove-Config.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7C52BBA13A70CA200D92B8F /* CouchDB */ = {
+			isa = PBXGroup;
+			children = (
+				D7C52BDF13A713E100D92B8F /* CouchDB.h */,
+				D7C52BE013A713E100D92B8F /* CouchDB.m */,
+			);
+			name = CouchDB;
+			sourceTree = "<group>";
+		};
+		D7C52BBE13A70F4B00D92B8F /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D7C52BC113A70F8700D92B8F /* ASICacheDelegate.h */,
+				D7C52BC213A70F8700D92B8F /* ASIDataCompressor.h */,
+				D7C52BC313A70F8700D92B8F /* ASIDataCompressor.m */,
+				D7C52BC413A70F8700D92B8F /* ASIDataDecompressor.h */,
+				D7C52BC513A70F8700D92B8F /* ASIDataDecompressor.m */,
+				D7C52BC613A70F8700D92B8F /* ASIDownloadCache.h */,
+				D7C52BC713A70F8700D92B8F /* ASIDownloadCache.m */,
+				D7C52BC813A70F8700D92B8F /* ASIFormDataRequest.h */,
+				D7C52BC913A70F8700D92B8F /* ASIFormDataRequest.m */,
+				D7C52BCA13A70F8700D92B8F /* ASIHTTPRequest.h */,
+				D7C52BCB13A70F8700D92B8F /* ASIHTTPRequest.m */,
+				D7C52BCC13A70F8700D92B8F /* ASIHTTPRequestConfig.h */,
+				D7C52BCD13A70F8700D92B8F /* ASIHTTPRequestDelegate.h */,
+				D7C52BCE13A70F8700D92B8F /* ASIInputStream.h */,
+				D7C52BCF13A70F8700D92B8F /* ASIInputStream.m */,
+				D7C52BD013A70F8700D92B8F /* ASINetworkQueue.h */,
+				D7C52BD113A70F8700D92B8F /* ASINetworkQueue.m */,
+				D7C52BD213A70F8700D92B8F /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		D7D81C0D13A8520300737FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7D81C1613A8520300737FCE /* YAJL.framework */,
+				D7D81C1813A8520300737FCE /* Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7D81C1A13A8565400737FCE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7D81C1B13A8567B00737FCE /* NSDictionary+UrlEncoding.h */,
+				D7D81C1C13A8567B00737FCE /* NSDictionary+UrlEncoding.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7C52B9813A70C1600D92B8F /* RobotLove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7C52BB713A70C1600D92B8F /* Build configuration list for PBXNativeTarget "RobotLove" */;
+			buildPhases = (
+				D7C52B9513A70C1600D92B8F /* Sources */,
+				D7C52B9613A70C1600D92B8F /* Frameworks */,
+				D7C52B9713A70C1600D92B8F /* Resources */,
+				D722177513A7A1800036BD17 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RobotLove;
+			productName = RobotLove;
+			productReference = D7C52B9913A70C1600D92B8F /* RobotLove.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7C52B9013A70C1600D92B8F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D7C52B9313A70C1600D92B8F /* Build configuration list for PBXProject "RobotLove" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7C52B8E13A70C1500D92B8F;
+			productRefGroup = D7C52B9A13A70C1600D92B8F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D7D81C0D13A8520300737FCE /* Products */;
+					ProjectRef = D7D81C0C13A8520300737FCE /* YAJL.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D7C52B9813A70C1600D92B8F /* RobotLove */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D7D81C1613A8520300737FCE /* YAJL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YAJL.framework;
+			remoteRef = D7D81C1513A8520300737FCE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D7D81C1813A8520300737FCE /* Tests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tests.framework;
+			remoteRef = D7D81C1713A8520300737FCE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7C52B9713A70C1600D92B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C52BA813A70C1600D92B8F /* InfoPlist.strings in Resources */,
+				D7C52BAE13A70C1600D92B8F /* Credits.rtf in Resources */,
+				D7C52BB413A70C1600D92B8F /* MainMenu.xib in Resources */,
+				D7C52BE313A7156100D92B8F /* RobotLove-Config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7C52B9513A70C1600D92B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C52BAB13A70C1600D92B8F /* main.m in Sources */,
+				D7C52BB113A70C1600D92B8F /* RobotLoveAppDelegate.m in Sources */,
+				D7C52BBD13A70CC700D92B8F /* RLHeartbeat.m in Sources */,
+				D7C52BD413A70F8700D92B8F /* ASIDataCompressor.m in Sources */,
+				D7C52BD513A70F8700D92B8F /* ASIDataDecompressor.m in Sources */,
+				D7C52BD613A70F8700D92B8F /* ASIDownloadCache.m in Sources */,
+				D7C52BD713A70F8700D92B8F /* ASIFormDataRequest.m in Sources */,
+				D7C52BD813A70F8700D92B8F /* ASIHTTPRequest.m in Sources */,
+				D7C52BD913A70F8700D92B8F /* ASIInputStream.m in Sources */,
+				D7C52BDA13A70F8700D92B8F /* ASINetworkQueue.m in Sources */,
+				D7C52BE113A713E100D92B8F /* CouchDB.m in Sources */,
+				D7D81C1D13A8567B00737FCE /* NSDictionary+UrlEncoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7C52BA613A70C1600D92B8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C52BA713A70C1600D92B8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D7C52BAC13A70C1600D92B8F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C52BAD13A70C1600D92B8F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D7C52BB213A70C1600D92B8F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C52BB313A70C1600D92B8F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7C52BB513A70C1600D92B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D7C52BB613A70C1600D92B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D7C52BB813A70C1600D92B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RobotLove/RobotLove-Prefix.pch";
+				INFOPLIST_FILE = "RobotLove/RobotLove-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D7C52BB913A70C1600D92B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RobotLove/RobotLove-Prefix.pch";
+				INFOPLIST_FILE = "RobotLove/RobotLove-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7C52B9313A70C1600D92B8F /* Build configuration list for PBXProject "RobotLove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C52BB513A70C1600D92B8F /* Debug */,
+				D7C52BB613A70C1600D92B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7C52BB713A70C1600D92B8F /* Build configuration list for PBXNativeTarget "RobotLove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C52BB813A70C1600D92B8F /* Debug */,
+				D7C52BB913A70C1600D92B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7C52B9013A70C1600D92B8F /* Project object */;
+}

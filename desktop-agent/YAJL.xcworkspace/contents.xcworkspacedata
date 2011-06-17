@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../../github/yajl-objc/Project/YAJL.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:RobotLove/RobotLove.xcodeproj">
+   </FileRef>
+</Workspace>
