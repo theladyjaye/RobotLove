@@ -95,18 +95,18 @@ Desktop Agent Properties
 ------------------------------
 RobotLove-Config.plist
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>local_database</key>
-	<string>robotlove2</string>
-	<key>remote_database</key>
-	<string>robotlove</string> 
-	<key>sleep_time</key>
-	<integer>15</integer>
-</dict>
-</plist>
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+	<dict>
+		<key>local_database</key>
+		<string>robotlove2</string>
+		<key>remote_database</key>
+		<string>robotlove</string> 
+		<key>sleep_time</key>
+		<integer>15</integer>
+	</dict>
+	</plist>
 
 local_database: 
 database name the desktop agent will read from
