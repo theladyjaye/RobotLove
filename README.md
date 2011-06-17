@@ -1,3 +1,8 @@
+TODO
+=================
+- Handle Pagination better on Instagram
+- Once the printer arrives add the appropriate delay for prints
+
 About
 =================
 So we wanted a photo booth, but naturally being a developer I wanted it to be something
@@ -91,9 +96,22 @@ https://github.com/gabriel/yajl-objc
 ASIHttpRequest
 http://allseeing-i.com/ASIHTTPRequest/
 
-Desktop Agent Properties
-------------------------------
-RobotLove-Config.plist
+Getting it up and Running
+============================
+
+Server Agent
+-------------------
+The server agent is kicked off by this command:
+"node agent.js"
+
+Desktop Agent
+-------------------
+You will need to install CouchDB on the machine you expect to be responsible for the printing.  
+
+Installing CouchDB on OS X:
+http://wiki.apache.org/couchdb/Installing_on_OSX
+
+Open the project in Xcode and configure and edit the RobotLove-Config.plist:
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -117,30 +135,3 @@ database name the server agent writes to
 sleep_time: 
 When there is nothing left to do, how many seconds should we wait to  
 have the local couchdb instance sync with the sever agent couchdb instance to check for more data
-
-Getting it up and Running
-============================
-
-Server Agent
--------------------
-The server agent is kicked off by this command:
-"node agent.js"
-
-Desktop Agent
--------------------
-You will need to install CouchDB on the machine you expect to be responsible for the printing.  
-
-Installing CouchDB on OS X:
-http://wiki.apache.org/couchdb/Installing_on_OSX
-
-Open the project in Xcode and configure and edit the RobotLove-Config.plist
-
-local_database  - Name of the CouchDB database that the desktop agent will read from locally.
-remote_database - Name of the remote CouchDB database that the server agent is writing to.
-sleep_time      - Once all of the photos have printed, how many seconds should we wait to check the server agent for more photos?
-
-
-
-TODO
-=================
-Handle Pagination better on Instagram
