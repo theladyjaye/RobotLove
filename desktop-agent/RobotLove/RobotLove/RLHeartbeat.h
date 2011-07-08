@@ -14,12 +14,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class CouchDB;
+@class CouchDB, IOBluetoothDevice, RLPrintJob;
 @interface RLHeartbeat : NSObject {
 @private
     CouchDB * couchdb;
     NSDictionary * config;
     NSMutableArray * queue;
+    IOBluetoothDevice * printer;
+    RLPrintJob * currentJob;
 }
 
 - (void)firstrun;
@@ -27,6 +29,8 @@
 - (void)sync;
 - (void)hydrate_queue;
 - (void)next_image;
+- (void)initializePrinter;
 - (void)print_image:(NSData *)data;
+- (void)print_image_complete;
 
 @end

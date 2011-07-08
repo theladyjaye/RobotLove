@@ -14,6 +14,8 @@
 
 #import "RLHeartbeat.h"
 #import "CouchDB.h"
+#import "RLPrintJob.h"
+#import <IOBluetooth/IOBluetooth.h>
 
 static NSInteger kLastSeq;
 static NSInteger kMaxSeq;
@@ -34,27 +36,65 @@ static NSInteger kPageSize;
 {
     self = [super init];
     
+    
     if (self) 
-    {
+    {  
         NSString * path = [[NSBundle mainBundle] pathForResource:@"RobotLove-Config" ofType:@"plist"];
         
         config     = [[NSDictionary dictionaryWithContentsOfFile:path] retain];
         couchdb    = [[CouchDB alloc] init];
         queue      = [[NSMutableArray alloc] initWithCapacity:kPageSize];
         
-        if(kLastSeq == 1)
-        {
-            [self firstrun];   
-        }
-        else
-        {
-            [self sync];
-        }
+        [self initializePrinter];
+        
     }
     
     return self;
 }
 
+- (void)initializePrinter
+{
+    NSLog(@"Initialize Printer");
+    // only have 1 bluetooth device connected
+    NSArray * devices = [IOBluetoothDevice pairedDevices];
+    printer = [devices objectAtIndex:0];
+    [printer retain];
+    
+    
+    //NSString * path = [[NSBundle mainBundle] pathForImageResource:@"c3bb6513ba5349148f69b4727aa26efe_7"];
+    //NSData * data = [NSData dataWithContentsOfFile:path];
+    //[self print_image:data];
+    //return;
+    
+    [printer performSDPQuery:self];
+    
+}
+
+- (void)sdpQueryComplete:(IOBluetoothDevice *)device status:(IOReturn)status
+{
+    if(status == kIOReturnSuccess)
+    {
+        if(kLastSeq == 1)
+        {
+            NSLog(@"First Run");
+            [self firstrun];   
+        }
+        else
+        {
+            NSLog(@"Sync");
+            //NSString * path = [[NSBundle mainBundle] pathForImageResource:@"c3bb6513ba5349148f69b4727aa26efe_7"];
+            //NSData * data = [NSData dataWithContentsOfFile:path];
+            //[self print_image:data];
+            
+            [self sync];
+        }
+    }
+    else
+    {
+        NSLog(@"BLUETOOTH QUERY ERROR");
+    }
+    
+}
 
 - (void)firstrun
 {
@@ -87,9 +127,14 @@ static NSInteger kPageSize;
     {
         if(ok)
         {
+            NSLog(@"Sync Complete");
             NSNumber * maxSeq = [data objectForKey:@"source_last_seq"];
             kMaxSeq = [maxSeq intValue];
             [self hydrate_queue];
+        }
+        else
+        {
+            NSLog(@"Sync Failed");
         }
 
     }];
@@ -161,6 +206,7 @@ static NSInteger kPageSize;
                    
                    if(ok)
                    {
+                       NSLog(@"Printing Image");
                        NSData * imageData = [data objectForKey:@"data"];
                        [self print_image:imageData];
                    }
@@ -174,7 +220,50 @@ static NSInteger kPageSize;
 
 - (void)print_image:(NSData *)data
 {
-    NSLog(@"Printing...");
+    currentJob = [RLPrintJob printJobWithBluetoothDevice:printer];
+    [currentJob retain];
+    
+    
+    [currentJob print:data callback:^
+    {
+        //[job release];
+        [self print_image_complete];
+    }];
+    
+    /*
+    IOBluetoothSDPServiceRecord *record;
+    OBEXFileTransferServices *transferServices;
+    IOBluetoothOBEXSession * OBEXSession;
+    
+    record = [printer getServiceRecordForUUID:[IOBluetoothSDPUUID uuid16:kBluetoothSDPUUID16ServiceClassOBEXObjectPush]];
+    //mOBEXSession = [IOBluetoothOBEXSession withSDPServiceRecord: record];
+    //[mOBEXSession retain];
+    OBEXSession = [[IOBluetoothOBEXSession alloc] initWithSDPServiceRecord:record];
+    
+    // Send the OBEXSession off to FTS
+    transferServices = [OBEXFileTransferServices withOBEXSession: OBEXSession];
+    
+    [transferServices retain];
+    [transferServices setDelegate:self];
+     */
+    
+    //Calling this method should trigger the delegate methods sooner or later	
+    /*
+    if([transferServices connectToObjectPushService] == kOBEXSuccess)
+    {
+        NSLog(@"ACCEPTS PUSH");
+        [transferServices disconnect];
+    }*/
+    
+    //[transferServices connectToObjectPushService]
+    
+    //NSString * path = [[NSBundle mainBundle] pathForImageResource:@"a31e76d335204ae4bb2b3da5dad69d70_7.jpg"];
+    //[mTransferServices sendFile:path];
+    //[mTransferServices sendData:data type:@"image/jpeg" name:@"photo.jpg"];
+    
+    
+    
+    /*
     NSImage * image = [[NSImage alloc] initWithData:data];
     NSImageView * imageView = [[NSImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 612.0, 612.0)];
     [imageView setImage:image];
@@ -203,6 +292,23 @@ static NSInteger kPageSize;
     //TODO: Need to handle print timing once the printer arrives
     NSLog(@"Next Image");
     [self next_image];
+     */
+}
+
+- (void)print_image_complete
+{
+    [currentJob release];
+    currentJob = nil;
+    
+    if([queue count] == 0)
+    {
+        NSLog(@"Queue is empty, Syncing");
+        [self sync];
+        return;
+    }
+    
+    NSLog(@"Fetching Next Image");
+    [self next_image];
 }
 
 - (void)dealloc
@@ -210,6 +316,7 @@ static NSInteger kPageSize;
     [couchdb release];
     [config release];
     [queue release];
+    [printer release];
     [super dealloc];
 }
 
