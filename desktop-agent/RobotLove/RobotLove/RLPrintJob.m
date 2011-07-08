@@ -61,7 +61,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [NSGraphicsContext setCurrentContext:[NSGraphicsContext
                                           graphicsContextWithBitmapImageRep:offscreenRep]];
     
-    NSRect resizedRect = NSMakeRect(0, 0, 800, 800); // 912x912 cuts off some of the image, this is a trial and error number
+    //NSRect resizedRect = NSMakeRect(0, 0, 800, 800); // 912x912 cuts off some of the image, this is a trial and error number
+    NSRect resizedRect = NSMakeRect(0, 0, 860, 860);
     
     CGImageRef resizedImageRef  = [image CGImageForProposedRect:&resizedRect context:[NSGraphicsContext currentContext] hints:nil];
     NSImage *resizedImage = [[NSImage alloc] initWithCGImage:resizedImageRef size:resizedRect.size];
@@ -88,7 +89,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [transform concat] ;
     // 56 = (912 - 800) / 2 
     // 70 = adjustments to make it fit on the top
-    [resizedImage drawAtPoint:NSMakePoint(56.0, -70.0) fromRect:resizedRect operation:NSCompositeCopy fraction:1.0];
+    //[resizedImage drawAtPoint:NSMakePoint(56.0, -70.0) fromRect:resizedRect operation:NSCompositeCopy fraction:1.0];
+    [resizedImage drawAtPoint:NSMakePoint(26.0, -26.0) fromRect:resizedRect operation:NSCompositeCopy fraction:1.0];
     
     // End Rotation
     
